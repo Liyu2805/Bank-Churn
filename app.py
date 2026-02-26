@@ -73,8 +73,8 @@ if st.button("Predict"):
 
     input_scaled = scaler.transform(input_df)
 
-prediction_proba = model.predict_proba(input_scaled)[0][1]
-prediction = model.predict(input_scaled)[0]
+    prediction_proba = model.predict_proba(input_scaled)[0][1]
+    prediction = model.predict(input_scaled)[0]
     st.subheader("Prediction Result")
 
     st.write(f"**Churn Probability:** {round(prediction_proba * 100, 2)}%")
