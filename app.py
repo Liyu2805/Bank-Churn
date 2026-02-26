@@ -65,7 +65,7 @@ input_dict = {
 }
 
 input_df = pd.DataFrame([input_dict])
-input_df = input_df.reindex(columns=feature_order, fill_value=0)
+input_df = input_df.reindex(columns=feature_cols, fill_value=0)
 
 st.header("🔮 Predict Churn Probability")
 
@@ -88,7 +88,7 @@ st.header("⭐ Feature Importance")
 if hasattr(model, "feature_importances_"):
     importances = model.feature_importances_
     feature_importance_df = pd.DataFrame({
-        "Feature": feature_order,
+        "Feature": feature_cols,
         "Importance": importances
     }).sort_values(by="Importance", ascending=False)
 
@@ -123,6 +123,5 @@ st.write("Primary Metric Optimized: Recall + AUC")
 st.write("**Recall:** Measures how many actual churn customers were correctly identified.")
 st.write("**AUC (ROC-AUC):** Measures model’s ability to distinguish churn vs non-churn.")
 
-# Replace with your real metrics
-st.metric("Recall", "0.84")
-st.metric("AUC Score", "0.89")
+st.metric("Recall (Churn Class)", "0.72")
+st.metric("AUC Score", "0.867")
