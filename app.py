@@ -13,7 +13,6 @@ feature_cols = joblib.load("feature_columns.pkl")
 st.set_page_config(page_title="Bank Churn Dashboard", layout="wide")
 
 st.title("🏦 End-to-End ML Churn Analytics System")
-
 # ----------------------------
 # Sidebar Inputs
 # ----------------------------
