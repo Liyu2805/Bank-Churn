@@ -18,17 +18,23 @@ st.title("🏦 End-to-End ML Churn Analytics System")
 # ----------------------------
 st.sidebar.header("Enter Customer Details")
 
-CreditScore = st.sidebar.number_input("Credit Score", 300, 900, 650)
-Age = st.sidebar.number_input("Age", 18, 100, 35)
-Tenure = st.sidebar.number_input("Tenure (Years)", 0, 10, 5)
-Balance = st.sidebar.number_input("Balance", 0.0, 250000.0, 50000.0)
-NumOfProducts = st.sidebar.number_input("Number of Products", 1, 4, 1)
+CreditScore = st.sidebar.number_input("Credit Score (300 - 900)", 300, 900, 650)
 
-HasCrCard = st.sidebar.selectbox("Has Credit Card", [0, 1])
-IsActiveMember = st.sidebar.selectbox("Is Active Member", [0, 1])
+Age = st.sidebar.number_input("Age (18 - 100)", 18, 100, 35)
 
-EstimatedSalary = st.sidebar.number_input("Estimated Salary", 1000, 200000, 60000)
-PointEarned = st.sidebar.number_input("Points Earned", 0, 1000, 200)
+Tenure = st.sidebar.number_input("Tenure in Years (0 - 10)", 0, 10, 5)
+
+Balance = st.sidebar.number_input("Balance (0 - 250000)", 0.0, 250000.0, 50000.0)
+
+NumOfProducts = st.sidebar.number_input("Number of Products (1 - 4)", 1, 4, 1)
+
+HasCrCard = st.sidebar.selectbox("Has Credit Card (0 = No, 1 = Yes)", [0, 1])
+
+IsActiveMember = st.sidebar.selectbox("Is Active Member (0 = No, 1 = Yes)", [0, 1])
+
+EstimatedSalary = st.sidebar.number_input("Estimated Salary (1000 - 200000)", 1000, 200000, 60000)
+
+PointEarned = st.sidebar.number_input("Points Earned (0 - 1000)", 0, 1000, 200)
 
 Geography = st.sidebar.selectbox("Geography", ["France", "Germany", "Spain"])
 Gender = st.sidebar.selectbox("Gender", ["Female", "Male"])
